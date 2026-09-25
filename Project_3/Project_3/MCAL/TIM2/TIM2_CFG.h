@@ -1,0 +1,32 @@
+/*
+ * TIM2_CFG.h
+ *
+ * Created: 9/22/2026 3:04:23 PM
+ *  Author: Eltawel
+ */ 
+
+
+#ifndef TIM2_CFG_H_
+#define TIM2_CFG_H_
+
+typedef enum
+{
+	TIM2_NORMAL = 0,
+	TIM2_PWM_PHASECORRECT,
+	TIM2_CTC,
+	TIM2_FASTPWM
+}TIM2_WGM_t;
+
+typedef enum
+{
+	TIM2_NO_CLK = 0,
+	TIM2_NO_PRESCALING,
+	TIM2_8_PRESCALER,
+	TIM2_32_PRESCALER,
+	TIM2_64_PRESCALER,
+	TIM2_128_PRESCALER,
+	TIM2_256_PRESCALER,
+	TIM2_1024_PRESCALER
+}TIM2_PRESCALER_t;
+
+#endif /* TIM2_CFG_H_ */
