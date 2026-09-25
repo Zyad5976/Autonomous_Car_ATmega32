@@ -14,8 +14,13 @@ An advanced, self-driving robotic system built on the **ATmega32** microcontroll
 
 The software architecture is engineered using an institutional **strict layered embedded design**, separating hardware controls from core application logic:
 
-┌─────────────────────────────┐│         APP Layer            │  ← Application Control Flow & Navigation Logic├─────────────────────────────┤│         HAL Layer            │  ← Hardware Abstraction (LCD, Servo, Ultrasonic, DC Motor)├─────────────────────────────┤│         MCAL Layer           │  ← Microcontroller Abstraction (DIO, TIM0, TIM1, TIM2, GI)└─────────────────────────────┘
-
+┌─────────────────────────────┐
+│         APP Layer  │  ← Application Control Flow & Navigation Logic
+├─────────────────────────────┤
+│         HAL Layer  │  ← Hardware Abstraction (LCD, Servo, Ultrasonic, DC Motor)
+├─────────────────────────────┤
+│         MCAL Layer │  ← Microcontroller Abstraction (DIO, TIM0, TIM1, TIM2, GI)
+└─────────────────────────────┘
 ---
 
 This ensures high code modularity, making drivers fully reusable, isolated, and easy to debug or port to other hardware targets.
@@ -64,7 +69,12 @@ This ensures high code modularity, making drivers fully reusable, isolated, and 
 
 ## 📂 Project Structure
 
-Project_3/├── Project_3/│   ├── APP/          # main.c, main.h (Application Loops)│   ├── HAL/          # LCD, SERVO, ULTRASONIC, DC_MOTOR Drivers│   ├── MCAL/         # DIO, TIM0, TIM1, TIM2, GI Drivers│   └── LIB/          # STD_TYPES.h, BIT_MATH.h, VECTOR_TABLE.h└── Project_3.atsln   # Microchip Studio Solution File
+Project_3/
+├── Project_3/
+│   ├── APP/  # main.c, main.h (Application Loops)
+│   ├── HAL/  # LCD, SERVO, ULTRASONIC, DC_MOTOR Drivers
+│   ├── MCAL/ # DIO, TIM0, TIM1, TIM2, GI Drivers
+│   └── LIB/  # STD_TYPES.h, BIT_MATH.h, VECTOR_TABLE.h└── Project_3.atsln   # Microchip Studio Solution File
 
 ---
 
